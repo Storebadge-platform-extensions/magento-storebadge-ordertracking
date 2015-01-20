@@ -1,0 +1,4 @@
+app/etc/modules/Storebadge_OrderTracking.xml
+app/code/community/Storebadge_OrderTracking
+app/design/frontend/base/default/layout/storebadge_ordertracking.xml
+app/design/frontend/base/default/template/storebadge

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Storebadge_OrderTracking
+ *
+ * Copyright (C) 2014 Advice Online Europe AB
+ *
+ * This file is part of Storebadge_OrderTracking.
+ *
+ * Storebadge_OrderTracking is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Storebadge_OrderTracking is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Storebadge_OrderTracking. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @category  Storebadge
+ * @package   Storebadge_OrderTracking
+ * @author    Daniel Bergstrom <danjulf@gmail.com>
+ * @copyright 2014 Advice Online Europe AB
+ * @license   http://www.gnu.org/licenses/lgpl.html GNU LGPL
+ */
+-->
+<layout version="0.1.0">
+
+    <!--
+    One page checkout success
+    -->
+
+    <checkout_onepage_success translate="label">
+        <reference name="before_body_end">
+            <block type="storebadge_ordertracking/checkout_onepage_success" name="checkout.success.storebadge" template="storebadge/ordertracking/success.phtml"/>
+        </reference>
+    </checkout_onepage_success>
+
+    <!--
+    Multi address shipping checkout success
+    -->
+
+    <checkout_multishipping_success translate="label">
+        <reference name="before_body_end">
+            <block type="storebadge_ordertracking/checkout_onepage_success" name="checkout.success.storebadge" template="storebadge/ordertracking/success.phtml"/>
+        </reference>
+    </checkout_multishipping_success>
+
+</layout>

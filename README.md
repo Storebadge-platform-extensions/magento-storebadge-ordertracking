@@ -1,2 +1,4 @@
-# magento-storebadge-ordertracking
+Storebadge-OrderTracking
+========================
+
 Magento Module for Storebadge Order Tracking

@@ -1,0 +1,51 @@
+<?php
+/**
+ * Storebadge_OrderTracking
+ *
+ * Copyright (C) 2014 Advice Online Europe AB
+ *
+ * This file is part of Storebadge_OrderTracking.
+ *
+ * Storebadge_OrderTracking is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Storebadge_OrderTracking is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Storebadge_OrderTracking. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @category  Storebadge
+ * @package   Storebadge_OrderTracking
+ * @author    Daniel Bergstrom <danjulf@gmail.com>
+ * @copyright 2014 Advice Online Europe AB
+ * @license   http://www.gnu.org/licenses/lgpl.html GNU LGPL
+ */
+?>
+<?php
+/* @var $this Storebadge_OrderTracking_Block_Checkout_Onepage_Success */
+$order = $this->getOrder();
+/* @var Mage_Sales_Model_Order $order*/
+?>
+<?php if ($this->isOrderTrackingEnabled()): ?>
+<!-- Storebadge Rating & Review Tracking -->
+<script type="text/javascript">
+// Mandatory below
+var sb_store = '<?php echo $this->getSBStoreName(); ?>';
+var sb_email = '<?php echo $order->getCustomerEmail(); ?>';
+var sb_reference = '<?php echo $order->getRealOrderId(); ?>';
+var sb_secret = '<?php echo $this->getOrderSecret($order); ?>';
+// Optional below
+var sb_fname = '<?php echo $order->getCustomerFirstname(); ?>';
+var sb_lname = '<?php echo $order->getCustomerLastname(); ?>';
+var sb_currency = '<?php echo $order->getOrderCurrencyCode(); ?>';
+var sb_amount = '<?php echo $order->getGrandTotal(); ?>';
+var sb_delay = false;
+</script>
+<script async type="text/javascript" src="//storebadgecdn-adviceonlineeuro.netdna-ssl.com/js/tracking.js"></script>
+<!-- Storebadge Rating & Review Tracking -->
+<?php endif; ?>
